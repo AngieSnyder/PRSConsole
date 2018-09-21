@@ -1,18 +1,23 @@
 package prs.business;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 public class PurchaseRequest {
 	private int id;
 	private int userId;
 	private String description;
 	private String justification;
-	private String dateNeeded;
+	private LocalDate dateNeeded;
 	private String deliveryMode;
 	private String status;
 	private double total;
-	private String submittedDate;
+	private LocalDateTime submittedDate;
 	private String reasonForRejection;
-	public PurchaseRequest(int id, int userId, String description, String justification, String dateNeeded,
-			String deliveryMode, String status, double total, String submittedDate, String reasonForRejection) {
+	
+	
+	public PurchaseRequest(int id, int userId, String description, String justification, LocalDate dateNeeded,
+			String deliveryMode, String status, double total, LocalDateTime submittedDate, String reasonForRejection) {
 		super();
 		this.id = id;
 		this.userId = userId;
@@ -25,6 +30,7 @@ public class PurchaseRequest {
 		this.submittedDate = submittedDate;
 		this.reasonForRejection = reasonForRejection;
 	}
+	
 	public int getId() {
 		return id;
 	}
@@ -49,10 +55,10 @@ public class PurchaseRequest {
 	public void setJustification(String justification) {
 		this.justification = justification;
 	}
-	public String getDateNeeded() {
+	public LocalDate getDateNeeded() {
 		return dateNeeded;
 	}
-	public void setDateNeeded(String dateNeeded) {
+	public void setDateNeeded(LocalDate dateNeeded) {
 		this.dateNeeded = dateNeeded;
 	}
 	public String getDeliveryMode() {
@@ -73,10 +79,10 @@ public class PurchaseRequest {
 	public void setTotal(double total) {
 		this.total = total;
 	}
-	public String getSubmittedDate() {
+	public LocalDateTime getSubmittedDate() {
 		return submittedDate;
 	}
-	public void setSubmittedDate(String submittedDate) {
+	public void setSubmittedDate(LocalDateTime submittedDate) {
 		this.submittedDate = submittedDate;
 	}
 	public String getReasonForRejection() {
