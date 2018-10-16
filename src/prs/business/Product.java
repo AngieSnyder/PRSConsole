@@ -2,21 +2,31 @@ package prs.business;
 
 public class Product {
 	private int id;
-	private int vendorId;
+	private int vendorID;
 	private String partNumber;
 	private String name;
 	private double price;
+	private String unit;
 	private String photoPath;
 	
 	
-	public Product(int id, int vendorId, String partNumber, String name, double price, String photoPath) {
+	public Product(int id, int vendorID, String partNumber, String name, double price, String unit, String photoPath) {
 		super();
 		this.id = id;
-		this.vendorId = vendorId;
+		this.vendorID = vendorID;
 		this.partNumber = partNumber;
 		this.name = name;
 		this.price = price;
+		this.unit = unit;
 		this.photoPath = photoPath;
+	}
+	
+	public Product(int vendorID, String partNumber, String name, double price) {
+		super();
+		this.vendorID = vendorID;
+		this.partNumber = partNumber;
+		this.name = name;
+		this.price = price;
 	}
 
 
@@ -30,13 +40,13 @@ public class Product {
 	}
 
 
-	public int getVendorId() {
-		return vendorId;
+	public int getvendorID() {
+		return vendorID;
 	}
 
 
-	public void setVendorId(int vendorId) {
-		this.vendorId = vendorId;
+	public void setvendorID(int vendorID) {
+		this.vendorID = vendorID;
 	}
 
 
@@ -68,6 +78,16 @@ public class Product {
 	public void setPrice(double price) {
 		this.price = price;
 	}
+	
+
+	public String getUnit() {
+		return unit;
+	}
+
+
+	public void setUnit(String unit) {
+		this.unit = unit;
+	}
 
 
 	public String getPhotoPath() {
@@ -82,8 +102,8 @@ public class Product {
 
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", vendorId=" + vendorId + ", partNumber=" + partNumber + ", name=" + name
-				+ ", price=" + price + ", photoPath=" + photoPath + "]";
+		return "Product [id=" + id + ", vendorID=" + vendorID + ", partNumber=" + partNumber + ", name=" + name
+				+ ", price=" + price + ", unit=" + unit + ", photoPath=" + photoPath + "]";
 	}
 
 	
